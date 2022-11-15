@@ -1,0 +1,8 @@
+.list-border::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  bottom: 0;
+  transition: width 0.5s ease;
+  width: 0%;
+}

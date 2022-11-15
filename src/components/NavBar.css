@@ -1,0 +1,11 @@
+.nav-items {
+  transform: translate(150);
+}
+.active::before {
+  background-color: rgb(255, 0, 85);
+  width: 100%;
+}
+.active {
+  color: rgb(255, 0, 85);
+}
+/* className=" before:bg-rose-500 before:w-full text-rose-500 " */
