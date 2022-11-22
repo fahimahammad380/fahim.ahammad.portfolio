@@ -4,9 +4,9 @@ import useDarkMode from "./Hooks/useDarkMode";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import Project from "./pages/Project";
+// import Project from "./pages/Project";
 import ProjectDetails from "./pages/ProjectDetails";
-// import Services from "./pages/Services";
+import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
               <Navbar />
               <Home />
               <AboutMe />
-              {/* <Services /> */}
-              <Project />
+              <Services />
+              {/* <Project /> */}
               <Blog />
               <Contact />
             </>
