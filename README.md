@@ -1,6 +1,6 @@
 # My Portfolio
 
-## Live site link: [https://motalib-pathan-portfolio.vercel.app/](https://https://fahim-ahammad.vercel.app//)
+## Live site link:(https://https://fahim-ahammad.vercel.app//)
 
 # This project was built using these technologies.
 
@@ -87,4 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# motalib-pathan-portfolio
+
