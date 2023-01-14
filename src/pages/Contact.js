@@ -39,11 +39,11 @@ const Contact = () => {
           <p className="text-gray-500 my-5">
             I am available for remote job. Connect with me via phone:{" "}
             <span className="dark:text-white text-rose-500">
-              +88 01684 352102
+              +88 01309773673
             </span>{" "}
             or email:{" "}
             <span className="dark:text-white text-rose-500">
-              motalib.pathan01@gmail.com
+              writetofahimahammad@gmail.com
             </span>
           </p>
           {!emailSend && (

@@ -34,7 +34,7 @@ const Navbar = () => {
     { href: "#home", name: "Home" },
     { href: "#about", name: "About" },
     // { href: "#services", name: "Service" },
-    { href: "#portfolio", name: "Portfolio" },
+    // { href: "#portfolio", name: "Portfolio" },
     { href: "#blog", name: "Blog" },
     { href: "#contact", name: "Contact" },
   ];
@@ -94,7 +94,7 @@ const Navbar = () => {
             </ScrollSpy>
             <span className="mr-2">
               <a
-                href="https://github.com/motalibpathan"
+                href="https://github.com/fahimahammad380"
                 target={"_blank"}
                 rel="noreferrer"
               >
@@ -104,7 +104,7 @@ const Navbar = () => {
             </span>
             <span>
               <a
-                href="https://www.linkedin.com/in/motalib-pathan"
+                href="https://www.linkedin.com/in/fahim-ahammad"
                 target={"_blank"}
                 rel="noreferrer"
               >
