@@ -137,11 +137,6 @@ const Navbar = () => {
           isNavOpen ? "translate-x-0" : "translate-x-52"
         } transition-all ease-in-out duration-300 px-5 bg-blue-100/50 backdrop-blur-lg h-screen`}
       >
-        <img
-          className="absolute  w-[95%] h-screen"
-          src={`https://tailwindcss.com/_next/static/media/8-dark@tinypng.7abc66a1.png`}
-          alt=""
-        />
         {/* menu */}
         {navItems.map((item, index) => (
           <a
@@ -188,6 +183,11 @@ const Navbar = () => {
         >
           {colorTheme === "dark" ? dark : light}
         </span>
+        <img
+          className="absolute  w-[95%] h-screen"
+          src={`https://tailwindcss.com/_next/static/media/8-dark@tinypng.7abc66a1.png`}
+          alt=""
+        />
       </div>
     </>
   );
