@@ -9,7 +9,6 @@ export default function useDarkMode() {
     root.classList.remove(colorTheme);
     root.classList.add(theme);
     localStorage.setItem("theme", theme);
-
     return () => {};
   }, [theme, colorTheme]);
 

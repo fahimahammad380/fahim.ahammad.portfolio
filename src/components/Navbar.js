@@ -15,7 +15,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       // console.log(window.pageYOffset);
-      if (window.pageYOffset > 500) {
+      if (window.pageYOffset > 150) {
         setBackground(true);
       } else {
         setBackground(false);
@@ -34,84 +34,92 @@ const Navbar = () => {
     { href: "#home", name: "Home" },
     { href: "#about", name: "About" },
     // { href: "#services", name: "Service" },
-    // { href: "#portfolio", name: "Portfolio" },
+    { href: "#portfolio", name: "Portfolio" },
     { href: "#blog", name: "Blog" },
     { href: "#contact", name: "Contact" },
   ];
 
   return (
-    <nav
-      className={`md:px-16 sm:px-4 w-full fixed top-0 h-[65px] md:h-[90px] px-5 md:z-50 ${
-        isNavOpen ? "z-50" : "z-10"
-      } ${
-        background ? "bg-[#191919] md:-mt-5 shadow-2xl " : "md:m-0"
-      } duration-500`}
-    >
-      <div className="flex flex-wrap justify-between items-center mx-auto pt-2">
-        <div className="w-1/2">
-          <a href="/" className="flex items-center ">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              <img className="" width={50} src="logo.png" alt="" />{" "}
-            </span>
-          </a>
-        </div>
-        <div className="z-50">
-          <button
-            onClick={() => setIsNavOpen(!isNavOpen)}
-            data-collapse-toggle="mobile-menu"
-            type="button"
-            className="text-white text-2xl md:hidden -mt-5 z-50"
-            aria-controls="mobile-menu-2"
-            aria-expanded="false"
-          >
-            {!isNavOpen ? (
-              <FontAwesomeIcon icon={faBars} />
-            ) : (
-              <FontAwesomeIcon icon={faXmark} />
-            )}
-          </button>
-        </div>
-        <div
-          className={`${
-            isNavOpen
-              ? "translate-x-20 md:translate-x-0 "
-              : "md:translate-x-0 translate-x-[500px] md:static absolute"
-          } w-full md:block md:w-auto md:bg-transparent opacity-90 bg-black -ml-5 nav-items transition-transform md:h-full h-screen md:m-0 -m-24 pt-10 md:pt-0 `}
-          id="mobile-menu"
-        >
-          <div className="md:flex gap-6 text-white flex-wrap md:p-0 p-5 md:mt-10 mt-0 mb-10 ">
+    <>
+      <div
+        className={` h-20  flex justify-center  w-full fixed top-0 z-50 backdrop-blur-lg${
+          background ? " bg-blue-100/50 md:backdrop-blur-lg md:shadow h-16" : ""
+        } duration-500 `}
+      >
+        <div className="flex  justify-between items-center mx-auto container px-3 ">
+          {/* logo */}
+          <div className="">
+            <a href="/" className="flex items-center ">
+              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                <img className="" width={50} src="logo.png" alt="" />{" "}
+              </span>
+            </a>
+          </div>
+
+          {/* mobile menu */}
+          <div className="md:hidden">
+            {/* menu toggle */}
+            <button
+              onClick={() => setIsNavOpen(!isNavOpen)}
+              data-collapse-toggle="mobile-menu"
+              type="button"
+              className="dark:text-white text-black text-3xl"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              {!isNavOpen ? (
+                <FontAwesomeIcon icon={faBars} />
+              ) : (
+                <FontAwesomeIcon icon={faXmark} />
+              )}
+            </button>
+            {/* menu */}
+          </div>
+
+          {/* desktop menu */}
+          <div className="hidden md:flex gap-6 text-white flex-wrap md:p-0 p-5  mt-0  ">
+            {/* menu */}
             <ScrollSpy>
               {navItems.map((item, index) => (
                 <a
                   ref={React.createRef()}
                   href={item.href}
                   key={index}
-                  className={` block pb-3 list-border cursor-pointer relative md:text-xl text-base md:my-0 my-3 font-bold `}
+                  className={`dark:text-white text-black block pb-3 list-border cursor-pointer relative md:text-xl text-base md:my-0 my-3 font-[600] `}
                 >
                   {item.name}
                 </a>
               ))}
             </ScrollSpy>
+            {/* git hub */}
             <span className="mr-2">
               <a
-                href="https://github.com/fahimahammad380"
+                href="https://github.com/writetofahim"
                 target={"_blank"}
                 rel="noreferrer"
               >
                 {" "}
-                <FontAwesomeIcon className="text-2xl" icon={faGithub} />{" "}
+                <FontAwesomeIcon
+                  className="text-2xl dark:text-white text-black"
+                  icon={faGithub}
+                />{" "}
               </a>
             </span>
+            {/* Linkedin */}
             <span>
               <a
-                href="https://www.linkedin.com/in/fahim-ahammad"
+                href="https://www.linkedin.com/in/fahim-ahammad/"
                 target={"_blank"}
                 rel="noreferrer"
               >
                 {" "}
-                <FontAwesomeIcon className="text-2xl" icon={faLinkedin} />{" "}
+                <FontAwesomeIcon
+                  className="text-2xl dark:text-white text-black"
+                  icon={faLinkedin}
+                />{" "}
               </a>
             </span>
+            {/* theme  */}
             <span
               onClick={() => setTheme(colorTheme)}
               className="md:inline block md:mt-0 mt-5 cursor-pointer "
@@ -121,14 +129,74 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+
+      <div
+        className={` fixed z-50  right-0 ${
+          background ? "top-16" : "top-20"
+        } w-52 ${
+          isNavOpen ? "translate-x-0" : "translate-x-52"
+        } transition-all ease-in-out duration-300 px-5 bg-blue-100/50 backdrop-blur-lg h-screen`}
+      >
+        <img
+          className="absolute  w-[95%] h-screen"
+          src={`https://tailwindcss.com/_next/static/media/8-dark@tinypng.7abc66a1.png`}
+          alt=""
+        />
+        {/* menu */}
+        {navItems.map((item, index) => (
+          <a
+            ref={React.createRef()}
+            href={item.href}
+            key={index}
+            className={`dark:text-white text-black block pb-3 cursor-pointer relative text-base my-3 font-[600] `}
+          >
+            {item.name}
+          </a>
+        ))}
+        {/* git hub */}
+        <span className="mr-2">
+          <a
+            href="https://github.com/writetofahim"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            {" "}
+            <FontAwesomeIcon
+              className="text-2xl dark:text-white text-black"
+              icon={faGithub}
+            />{" "}
+          </a>
+        </span>
+        {/* Linkedin */}
+        <span>
+          <a
+            href="https://www.linkedin.com/in/fahim-ahammad/"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            {" "}
+            <FontAwesomeIcon
+              className="text-2xl dark:text-white text-black"
+              icon={faLinkedin}
+            />{" "}
+          </a>
+        </span>
+        {/* theme  */}
+        <span
+          onClick={() => setTheme(colorTheme)}
+          className="md:inline block md:mt-0 mt-5 cursor-pointer "
+        >
+          {colorTheme === "dark" ? dark : light}
+        </span>
+      </div>
+    </>
   );
 };
 
 const light = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
+    className="h-6 w-6 dark:text-gray-100 text-gray-900"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -144,7 +212,7 @@ const light = (
 const dark = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
+    className="h-6 w-6 dark:text-gray-100 text-gray-900"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
