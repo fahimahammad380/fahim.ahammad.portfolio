@@ -40,7 +40,7 @@ const Home = () => {
               rel="noreferrer"
               className="text-white border-2 border-rose-600 py-3 px-8 bg-rose-600 cursor-pointer rounded-md mt-10  duration-500 hover:bg-transparent z-10"
             >
-              Download Resume
+              Download Resume changed
             </a>
           </div>
         </div>
