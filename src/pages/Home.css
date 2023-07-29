@@ -1,7 +1,44 @@
 header {
-  background: url(/public/bg-image-29.jpg);
+  /* background: url(/public/bg-image-29.jpg); */
   /* background: url("../../public/bg-image-29.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.journey_graph {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* border-left: 2px solid white; */
+}
+
+.graph {
+  padding-left: 5%;
+  position: relative;
+}
+
+.graph:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -0%;
+  width: 9px;
+  height: 9px;
+  transform: translate(-50%, -50%);
+  border: 1px solid;
+  background: white;
+  border-radius: 50%;
+}
+
+.graph:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -0%;
+  width: 20px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background: white;
 }

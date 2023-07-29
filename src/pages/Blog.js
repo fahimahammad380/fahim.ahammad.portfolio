@@ -2,15 +2,16 @@
 // import Button from "../components/Button";
 import SectionHeader from "../components/SectionHeader";
 
-const Services = () => {
+const Blogs = () => {
   const title = "Latest Blogs";
   const desc1 = "This is my blogs section";
   const desc2 = " Blogs about Web Development, JavaScript Programming";
 
+  // tailwindcss.com/_next/static/media/1-dark@tinypng.a99d6c93.png
   return (
     <div
       id="blog"
-      className="md:min-h-screen dark:bg-[#191919] bg-gray-100 py-32 px-7 md:px-0"
+      className="md:min-h-screen dark:bg-[#191919] bg-gray-100 py-32 px-7 md:px-0 bg-[url('https://tailwindcss.com/_next/static/media/8-dark@tinypng.7abc66a1.png')] bg-no-repeat lg:bg-center bg-cover"
     >
       <SectionHeader title={title} desc1={desc1} desc2={desc2} />
       <div className="h-screen flex justify-center dark:text-white text-black">
@@ -67,4 +68,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Blogs;

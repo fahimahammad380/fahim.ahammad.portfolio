@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { certificate, education, mainSkills } from "./asserts/aboutMeData";
-// import "./ExperienceTab.css";
+import {
+  certificate,
+  education,
+  experience,
+  mainSkills,
+} from "./asserts/aboutMeData";
+import "./ExperienceTab.css";
 
 const ExperienceTab = () => {
   const tabItems = [
