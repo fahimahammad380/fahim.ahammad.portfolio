@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ScrollSpy from "react-scrollspy-navigation";
 import useDarkMode from "../Hooks/useDarkMode";
 import "./ExperienceTab.css";
@@ -11,6 +11,28 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [background, setBackground] = useState(false);
   const [colorTheme, setTheme] = useDarkMode();
+
+  const sidebarRef = useRef();
+
+  // console.log(sidebarRef.current.contains(e.target));
+  useEffect(() => {
+    // Attach click event listener to the document when the sidebar is open
+    if (isNavOpen) {
+      document.addEventListener("click", handleOutsideClick);
+    }
+
+    // Clean up the event listener when the sidebar is closed or component unmounts
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [isNavOpen]);
+
+  const handleOutsideClick = (event) => {
+    // Check if the clicked target is inside the sidebar
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setIsNavOpen(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -131,6 +153,7 @@ const Navbar = () => {
       </div>
 
       <div
+        ref={sidebarRef}
         className={` fixed z-50  right-0 ${
           background ? "top-16" : "top-20"
         } w-52 ${
