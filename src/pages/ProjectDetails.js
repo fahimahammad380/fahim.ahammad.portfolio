@@ -1,7 +1,5 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowUpRightFromSquare,
-  faServer,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -71,7 +69,7 @@ const ProjectDetails = () => {
             <FontAwesomeIcon className="mr-2" icon={faArrowUpRightFromSquare} />
             Live site
           </a>
-          <a
+          {/* <a
             className="px-5 py-3 bg-rose-500 rounded-md border border-rose-500 hover:bg-transparent duration-500"
             target="_blank"
             rel="noreferrer"
@@ -79,8 +77,8 @@ const ProjectDetails = () => {
           >
             <FontAwesomeIcon className="mr-2" icon={faGithub} />
             Client Source
-          </a>
-          {projectDetails.links.serverSource && (
+          </a> */}
+          {/* {projectDetails.links.serverSource && (
             <a
               className="px-5 py-3 bg-rose-500 rounded-md border border-rose-500 hover:bg-transparent duration-500"
               target="_blank"
@@ -90,7 +88,7 @@ const ProjectDetails = () => {
               <FontAwesomeIcon className="mr-2" icon={faServer} />
               Server Source
             </a>
-          )}
+          )} */}
         </div>
       </div>
     </div>
