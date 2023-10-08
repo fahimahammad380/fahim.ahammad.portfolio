@@ -70,13 +70,13 @@ const Navbar = () => {
       >
         <div className="flex  justify-between items-center mx-auto container px-3 ">
           {/* logo */}
-          <div className="">
+          {/* <div className="">
             <a href="/" className="flex items-center ">
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 <img className="" width={50} src="logo.png" alt="" />{" "}
               </span>
             </a>
-          </div>
+          </div> */}
 
           {/* mobile menu */}
           <div className="md:hidden">
